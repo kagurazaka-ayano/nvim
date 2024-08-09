@@ -1,0 +1,640 @@
+{
+	"Hexo article header": {
+		"prefix": "hexo",
+		"body": [
+			"---",
+			"title: $1",
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"tags: []",
+			"categories: []",
+			"hidden: true",
+			"excerpt: $2",
+			"---",
+			"$3"
+		]
+	},
+	"Redefine note info": {
+		"prefix": "noteinfo",
+		"body": [
+			"{% notel info fa-circle-info%}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note primary": {
+		"prefix": "noteprimary",
+		"body": [
+			"{% notel primary fa-circle-plus%}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Example problem": {
+		"prefix": "exprob",
+		"body": [
+			"{% notel primary fa-circle-plus Example %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note success": {
+		"prefix": "notesuccess",
+		"body": [
+			"{% notel success fa-check%}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note warning": {
+		"prefix": "notewarning",
+		"body": [
+			"{% notel warning %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note danger": {
+		"prefix": "notedanger",
+		"body": [
+			"{% notel danger fa-bolt %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note danger no icon": {
+		"prefix": "notedangernoico",
+		"body": [
+			"{% notel danger %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note info no icon": {
+		"prefix": "noteinfonoico",
+		"body": [
+			"{% notel info %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note primary no icon": {
+		"prefix": "noteprimarynoico",
+		"body": [
+			"{% notel primary %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note success no icon": {
+		"prefix": "notesuccessnoico",
+		"body": [
+			"{% notel success %}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine note warning no icon": {
+		"prefix": "notewarningnoico",
+		"body": [
+			"{% notel warning fa-circle-exclamation%}",
+			"$1",
+			"{% endnotel %}"
+		]
+	},
+	"Redefine tag info": {
+		"prefix": "taginfo",
+		"body": [
+			"{% note info fa-circle-info%}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag primary": {
+		"prefix": "tagprimary",
+		"body": [
+			"{% note primary fa-circle-plus%}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag success": {
+		"prefix": "tagsuccess",
+		"body": [
+			"{% note success fa-check%}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag warning": {
+		"prefix": "tagwarning",
+		"body": [
+			"{% note warning fa-circle-exclamation%}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag danger": {
+		"prefix": "tagdanger",
+		"body": [
+			"{% note danger fa-bolt %}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag danger no icon": {
+		"prefix": "tagdangernoico",
+		"body": [
+			"{% note danger %}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag info no icon": {
+		"prefix": "taginfonoico",
+		"body": [
+			"{% note info %}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag primary no icon": {
+		"prefix": "tagprimarynoico",
+		"body": [
+			"{% note primary %}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag success no icon": {
+		"prefix": "tagsuccessnoico",
+		"body": [
+			"{% note success %}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine tag warning no icon": {
+		"prefix": "tagwarningnoico",
+		"body": [
+			"{% note warning %}",
+			"$1",
+			"{% note %}"
+		]
+	},
+	"Redefine inline button": {
+		"prefix": "btni",
+		"body": [
+			"{% btn ::$1::$2%}"
+		]
+	},
+	"Redefine button": {
+		"prefix": "btn",
+		"body": [
+			"{% btn regular::$1::$2%}"
+		]
+	},
+	"Redefine large button": {
+		"prefix": "btnl",
+		"body": [
+			"{% btn center large::$1::$2%}"
+		]
+	},
+	"Redefine goto article": {
+		"prefix": "goart",
+		"body": [
+			"{% btn center large::$1::$2::fa-book%}"
+		]
+	},
+	"Redefine tab": {
+		"prefix": "tab",
+		"body": [
+			"{% tabs $1%}",
+			"<!-- tab $2 -->",
+			"<!-- endtab -->",
+			"{% endtabs %}"
+		]
+	},
+	"Divide line": {
+		"prefix": "split",
+		"body": [
+			"------------------"
+		]
+	},
+	"Cpp compiler notice": {
+		"prefix": "cppcompiler",
+		"body": [
+			"{% note primary fa-computer-classic%}",
+			"If not specified, all the code is written in c++23 standard, compiled with g++ 13.2",
+			"command: `g++ -std=c++2b -O0 $1.cpp -o out && ./out`",
+			"{% endnote %}"
+		]
+	},
+	"Mermaid graph": {
+		"prefix": "mermaid",
+		"body": [
+			"```mermaid",
+			"%%{",
+			"   init: {",
+			"     'theme': 'base',",
+			"       'themeVariables': { ",
+			"       'primaryColor': '#add8e6',",
+			"       'noteTextColor': '#0f0f0f',",
+			"       'noteBkgColor': '#f5f6fa',",
+			"       'lineColor': '#eaa1af',",
+  "		  'textColor': '#EAA1AF',",
+			"       'labelBoxBkgColor': '#add8e6'",
+			"     }",
+			"   }",
+			"}%%",
+			"$1",
+			"```"
+		]
+	},
+	"Codeblock": {
+		"prefix": "code",
+		"body": [
+			"```$1",
+			"$2",
+			"```"
+		]
+	},
+	"Inline code": {
+		"prefix": "codel",
+		"body": [
+			"`$1`"
+		]
+	},
+	"Fold block normal": {
+		"prefix": "foldn",
+		"body": [
+			"{% folding gray::$1 %}",
+			"$2",
+			"{% endfolding %}"
+		]
+	},
+	"Fold block code": {
+		"prefix": "foldcode",
+		"body": [
+			"{% folding blue::$1 %}",
+			"$2",
+			"{% endfolding %}"
+		]
+	},
+	"Fold math process": {
+		"prefix": "foldmath",
+		"body": [
+			"{% folding pink::$1 %}",
+			"$$",
+			"$2",
+			"$$",
+			"{% endfolding %}"
+		]
+	},
+	"Fold block blue": {
+		"prefix": "foldb",
+		"body": [
+			"{% folding blue::$1 %}",
+			"$2",
+			"{% endfolding %}"
+		]
+	},
+	"Circuit tikz": {
+		"prefix": "circuit",
+		"body": [
+			"```tikz",
+			"\\documentclass[margin=10pt]{standalone}",
+			"\\usepackage[siunitx]{circuitikz}",
+			"\\begin{document}",
+			"\\begin{tikzpicture}[color={rgb,255:red,176; green,88; blue,202}, line width=0.8pt]",
+			"$1",
+			"\\end{tikzpicture}",
+			"\\end{document}",
+			"```"
+		]
+	},
+	"Italic": {
+		"prefix": "ita",
+		"body": [
+			"*$1*"
+		]
+	},
+	"Bold": {
+		"prefix": "bol",
+		"body": [
+			"**$1**"
+		]
+	},
+	"Bold and italic": {
+		"prefix": "boli",
+		"body": [
+			"***$1***"
+		]
+	},
+	"Equation": {
+		"prefix": "eq",
+		"body": [
+			"$$",
+			"$1",
+			"$$"
+		]
+	},
+	"Equation inline": {
+		"prefix": "eqi",
+		"body": [
+			"$$1$"
+		]
+	},
+	"If and only if": {
+		"prefix": "iff",
+		"body": [
+			"if and only if "
+		]
+	},
+	"Conputation warning": {
+		"prefix": "longcomp",
+		"body": [
+			"{% note warning fa-circle-exclamation%}",
+			"The calculation process is long and disgusting, this can be an exercise, or you can check the process.",
+			"{% endnote %}",
+			"{% folding pink::Folding Answer and process %}",
+			"$1",
+			"{% endfolding %}"
+		]
+	},
+	"Long code warning": {
+		"prefix": "longcode",
+		"body": [
+			"{% note warning fa-circle-exclamation%}",
+			"This code is very long.",
+			"TLDR: $1",
+			"{% endnote %}",
+			"{% folding blue::$2 %}",
+			"$3",
+			"{% endfolding %}"
+		]
+	},
+	"Long output warning": {
+		"prefix": "longout",
+		"body": [
+			"{% note warning fa-circle-exclamation %}",
+			"This output is very long.",
+			"{% endnote %}",
+			"{% folding blue::Output %}",
+			"$3",
+			"{% endfolding %}"
+		]
+	},
+	"Associated Code": {
+		"prefix": "codea",
+		"body": [
+			"## Associated code",
+			"{% folding cyan::Associated Code %}",
+			"$2",
+			"{% endfolding %}"
+		]
+	},
+	"Associated File": {
+		"prefix": "filea",
+		"body": [
+			"{% folding cyan::$1 %}",
+			"```$2",
+			"$3",
+			"```",
+			"{% endfolding %}"
+		]
+	},
+	"CMake Notice": {
+		"prefix": "cmakenotice",
+		"body": [
+			"{% note primary fa-computer-classic %}",
+			"The code is compiled with cmake, please check out CMakeLists.txt",
+			"{% endnote %}"
+		]
+	},
+	"File Name": {
+		"prefix": "filename",
+		"body": [
+			"{% note primary fa-circle-plus%}",
+			"$1",
+			"{% endnote %}",
+			"```$2",
+			"$3",
+			"```"
+		]
+	},
+	"Redefine go arcive": {
+		"prefix": "goarc",
+		"body": [
+			"{% btn center large::$1::$2::fa-folder%}"
+		]
+	},
+	"Columb's const": {
+		"prefix": "columb",
+		"body": [
+			"\\frac{1}{4\\pi\\epsilon_0}"
+		]
+	},
+	"Align": {
+		"prefix": "align",
+		"body": [
+			"$$",
+			"\\begin{align*}",
+			"$1",
+			"\\end{align*}",
+			"$$"
+		]
+	},
+	"Link": {
+		"prefix": "link",
+		"body": [
+			"[$1]($2)$3"
+		]
+	},
+	"Image": {
+		"prefix": "img",
+		"body": [
+			"![$1]($2)$3"
+		]
+	},
+	"x1": {
+		"prefix": "x1",
+		"body": [
+			"x_1"
+		]
+	},
+	"x2": {
+		"prefix": "x2",
+		"body": [
+			"x_2"
+		]
+	},
+	"x3": {
+		"prefix": "x3",
+		"body": [
+			"x_3"
+		]
+	},
+	"x4": {
+		"prefix": "x4",
+		"body": [
+			"x_4"
+		]
+	},
+	"i1": {
+		"prefix": "i1",
+		"body": [
+			"i_1"
+		]
+	},
+	"i2": {
+		"prefix": "i2",
+		"body": [
+			"i_2"
+		]
+	},
+	"i3": {
+		"prefix": "i3",
+		"body": [
+			"i_3"
+		]
+	},
+	"i4": {
+		"prefix": "i4",
+		"body": [
+			"i_4"
+		]
+	},
+	"v1": {
+		"prefix": "v1",
+		"body": [
+			"v_1"
+		]
+	},
+	"v2": {
+		"prefix": "v2",
+		"body": [
+			"v_2"
+		]
+	},
+	"v3": {
+		"prefix": "v3",
+		"body": [
+			"v_3"
+		]
+	},
+	"v4": {
+		"prefix": "v4",
+		"body": [
+			"v_4"
+		]
+	},
+	"r1": {
+		"prefix": "r1",
+		"body": [
+			"r_1"
+		]
+	},
+	"r2": {
+		"prefix": "r2",
+		"body": [
+			"r_2"
+		]
+	},
+	"r3": {
+		"prefix": "r3",
+		"body": [
+			"r_3"
+		]
+	},
+	"r4": {
+		"prefix": "r4",
+		"body": [
+			"r_4"
+		]
+	},
+	"w1": {
+		"prefix": "w1",
+		"body": [
+			"w_1"
+		]
+	},
+	"w2": {
+		"prefix": "w2",
+		"body": [
+			"w_2"
+		]
+	},
+	"w3": {
+		"prefix": "w3",
+		"body": [
+			"w_3"
+		]
+	},
+	"w4": {
+		"prefix": "w4",
+		"body": [
+			"w_4"
+		]
+	},
+	"Table 2x2": {
+		"prefix": "t22",
+		"body": [
+			"| $1 | $2 |",
+			"| -- | -- |",
+			"| $3 | $4 |"
+		]
+	},
+	"Table 3x3": {
+		"prefix": "t33",
+		"body": [
+			"| $1 | $2 | $3 |",
+			"| -- | -- | -- |",
+			"| $4 | $5 | $6 |",
+			"| $7 | $8 | $9 |"
+		]
+	},
+	"Truth table 2 input 1 output": {
+		"prefix": "t2in",
+		"body": [
+			"| $1 | $2 | $3 |",
+			"| -- | -- | -- |",
+			"| $3 | $4 | $5 |",
+			"| $6 | $7 | $8 |",
+			"| $9 | $10 | $11 |",
+			"| $12 | $13 | $14 |"
+		]
+	},
+	"Table 3 input 1 output": {
+		"prefix": "t3in",
+		"body": [
+			"| $1 | $2 | $3 | $4 |",
+			"| -- | -- | -- | -- |",
+			"| $5 | $6 | $7 | $8 |",
+			"| $9 | $10 | $11 | $12 |",
+			"| $13 | $14 | $15 | $16 |",
+			"| $17 | $18 | $19 | $20 |",
+			"| $21 | $22 | $23 | $24 |",
+			"| $25 | $26 | $27 | $28 |",
+			"| $29 | $30 | $31 | $32 |",
+			"| $33 | $34 | $35 | $36 |"
+		]
+	},
+	"Table 2 col entry": {
+		"prefix": "t2",
+		"body": [
+			"| $1 | $2 |"
+		]
+	},
+	"Table 3 col entry": {
+		"prefix": "t3",
+		"body": [
+			"| $1 | $2 | $3 |"
+		]
+	},
+	"Table 4 col entry": {
+		"prefix": "t4",
+		"body": [
+			"| $1 | $2 | $3 | $4 |"
+		]
+	}
+}
