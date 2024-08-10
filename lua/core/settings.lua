@@ -185,7 +185,7 @@ settings["gui_config"] = {
 ---@type table<string, boolean|number|string>
 settings["neovide_config"] = {
 	no_idle = true,
-	refresh_rate = 165,
+	refresh_rate = 120,
 	cursor_vfx_mode = "railgun",
 	cursor_vfx_opacity = 200.0,
 	cursor_antialiasing = true,
