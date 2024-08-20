@@ -6,8 +6,6 @@ settings["use_ssh"] = true
 
 settings["colorscheme"] = "catppuccin"
 
-settings["disabled_plugins"] = {
-	"iamcco/markdown-preview.nvim",
-}
+settings["disabled_plugins"] = {}
 
 return settings
