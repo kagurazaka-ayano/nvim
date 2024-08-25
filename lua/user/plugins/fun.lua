@@ -1,9 +1,7 @@
 local fun = {}
 
 fun["andweeb/presence.nvim"] = {
-	config = function()
-		require("configs.fun.presence")
-	end,
+	config = require("configs.fun.presence"),
 }
 
 return fun

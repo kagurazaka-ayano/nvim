@@ -20,4 +20,8 @@ env["alepez/vim-gtest"] = {
 	ft = { "c", "cpp" },
 }
 
+env["HiPhish/gradle.nvim"] = {
+	ft = { "gradle", "java" },
+}
+
 return env
