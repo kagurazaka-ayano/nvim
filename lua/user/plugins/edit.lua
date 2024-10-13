@@ -11,7 +11,7 @@ edit["kylechui/nvim-surround"] = {
 }
 
 edit["danymat/neogen"] = {
-	config = true,
+	lazy = true,
 }
 
 return edit
