@@ -1,6 +1,7 @@
 local lang = {}
 
 lang["nvim-java/nvim-java"] = {
+	lazy = true,
 	ft = { "java", "gradle" },
 	init = function()
 		require("lspconfig").jdtls.setup({})

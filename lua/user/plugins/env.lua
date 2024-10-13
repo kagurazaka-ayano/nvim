@@ -16,11 +16,13 @@ env["Civitasv/cmake-tools.nvim"] = {
 }
 
 env["alepez/vim-gtest"] = {
+	lazy = true,
 	init = function() end,
 	ft = { "c", "cpp" },
 }
 
 env["HiPhish/gradle.nvim"] = {
+	lazy = true,
 	ft = { "gradle", "java" },
 }
 
