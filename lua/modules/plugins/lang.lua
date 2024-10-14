@@ -8,15 +8,7 @@ lang["kevinhwang91/nvim-bqf"] = {
 		{ "junegunn/fzf", build = ":call fzf#install()" },
 	},
 }
-lang["MeanderingProgrammer/render-markdown.nvim"] = {
-	lazy = true,
-	ft = "markdown",
-	config = require("lang.render-markdown"),
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-		"nvim-treesitter/nvim-treesitter",
-	},
-}
+
 lang["iamcco/markdown-preview.nvim"] = {
 	lazy = true,
 	ft = "markdown",
