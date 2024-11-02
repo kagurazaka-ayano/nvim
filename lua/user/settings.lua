@@ -6,6 +6,12 @@ settings["use_ssh"] = true
 
 settings["colorscheme"] = "catppuccin"
 
-settings["disabled_plugins"] = {}
+settings["dap_deps"] = {
+	"coreclr",
+}
+
+settings["disabled_plugins"] = {
+	"zbirenbaum/neodim",
+}
 
 return settings

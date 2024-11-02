@@ -11,7 +11,7 @@ local plug_map = {
 		:with_silent()
 		:with_desc("tool: toggle markdown preview within nvim"),
 	-- Plugin MarkdownPreview
-	["n|<F12>"] = map_cr("MarkdownPreviewToggle"):with_noremap():with_silent():with_desc("tool: Preview markdown"),
+	["n|<F12>"] = map_cr("PeekOpen"):with_noremap():with_silent():with_desc("tool: Preview markdown"),
 }
 
 bind.nvim_load_mapping(plug_map)

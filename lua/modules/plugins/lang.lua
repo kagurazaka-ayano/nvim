@@ -9,10 +9,17 @@ lang["kevinhwang91/nvim-bqf"] = {
 	},
 }
 
-lang["iamcco/markdown-preview.nvim"] = {
+lang["toppair/peek.nvim"] = {
 	lazy = true,
 	ft = "markdown",
-	build = ":call mkdp#util#install()",
+	build = "deno task --quiet build:fast",
+	init = function()
+		require("peek").setup({
+			app = "browser",
+		})
+		vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+		vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+	end,
 }
 lang["chrisbra/csv.vim"] = {
 	lazy = true,

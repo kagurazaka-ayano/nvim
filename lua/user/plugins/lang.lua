@@ -9,4 +9,9 @@ lang["nvim-java/nvim-java"] = {
 	config = require("configs.lang.nvim-java"),
 }
 
+lang["Hoffs/omnisharp-extended-lsp.nvim"] = {
+	lazy = true,
+	ft = { "csharp" },
+}
+
 return lang

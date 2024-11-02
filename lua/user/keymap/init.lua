@@ -5,5 +5,6 @@ return vim.tbl_extend(
 	require("user.keymap.editor"),
 	require("user.keymap.lang"),
 	require("user.keymap.tool"),
-	require("user.keymap.ui")
+	require("user.keymap.ui"),
+	require("user.keymap.edit").plug_map
 )
