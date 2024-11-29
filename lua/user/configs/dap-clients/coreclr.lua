@@ -3,7 +3,12 @@ return function()
 	dap.adapters.godot = {
 		type = "server",
 		host = "127.0.0.1",
-		port = 6006,
+		port = 6008,
+	}
+	dap.adapters.codeclr = {
+		type = "executable",
+		command = require("mason-registry").get_package("netcoredbg"),
+		args = { "--interpreter=vscode" },
 	}
 	dap.configurations.cs = {
 		{
@@ -14,11 +19,14 @@ return function()
 			preLaunchTask = "build",
 			args = { "--path", "${workspaceRoot}" },
 			cwd = "${workspaceFolder}",
+			console = "internalConsole",
+			address = "127.0.0.1",
+			launch_game_instance = true,
 			stopAtEntry = false,
 		},
 		{
 			name = "[GODOT] Launch Editor",
-			type = "coreclr",
+			type = "godot",
 			request = "launch",
 			program = "${config:godot-dotnet-tools.executablePath}",
 			preLaunchTask = "build",
@@ -26,6 +34,7 @@ return function()
 				"--path",
 				"${workspaceRoot}",
 				"--editor",
+				"--debug",
 			},
 			cwd = "${workspaceFolder}",
 			console = "internalConsole",
@@ -35,6 +44,7 @@ return function()
 			name = "Attach to Process",
 			type = "coreclr",
 			request = "attach",
+			processId = require("dap.utils").pick_process,
 		},
 	}
 end
