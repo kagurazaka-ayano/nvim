@@ -14,4 +14,13 @@ lang["Hoffs/omnisharp-extended-lsp.nvim"] = {
 	ft = { "csharp" },
 }
 
+lang["CrystalAlpha358/vim-mcfunction"] = {
+	lazy = true,
+	ft = { "mcfunction" },
+}
+
+lang["laurelmay/riscv.vim"] = {
+	lazy = false,
+}
+
 return lang

@@ -8,7 +8,19 @@ lang["kevinhwang91/nvim-bqf"] = {
 		{ "junegunn/fzf", build = ":call fzf#install()" },
 	},
 }
-
+lang["mrcjkb/rustaceanvim"] = {
+	lazy = true,
+	ft = "rust",
+	version = "*",
+	init = require("lang.rust"),
+	dependencies = { "nvim-lua/plenary.nvim" },
+}
+lang["Saecki/crates.nvim"] = {
+	lazy = true,
+	event = "BufReadPost Cargo.toml",
+	config = require("lang.crates"),
+	dependencies = { "nvim-lua/plenary.nvim" },
+}
 lang["toppair/peek.nvim"] = {
 	lazy = true,
 	ft = "markdown",
