@@ -14,4 +14,9 @@ lang["Hoffs/omnisharp-extended-lsp.nvim"] = {
 	ft = { "csharp" },
 }
 
+lang["mrcjkb/rustaceanvim"] = {
+	versions = "^5",
+	lazy = false,
+}
+
 return lang
