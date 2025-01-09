@@ -16,6 +16,13 @@ lang["Hoffs/omnisharp-extended-lsp.nvim"] = {
 
 lang["mrcjkb/rustaceanvim"] = {
 	versions = "^5",
+}
+lang["CrystalAlpha358/vim-mcfunction"] = {
+	lazy = true,
+	ft = { "mcfunction" },
+}
+
+lang["laurelmay/riscv.vim"] = {
 	lazy = false,
 }
 
