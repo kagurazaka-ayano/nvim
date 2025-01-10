@@ -80,7 +80,7 @@
 		"description": "ranged for loop"
 	},
 	"const reference": {
-		"prefix": "coref",
+		"prefix": "cor",
 		"body": [
 			"const $1&$2"
 		]
