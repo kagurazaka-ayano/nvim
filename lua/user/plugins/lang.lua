@@ -15,6 +15,8 @@ lang["Hoffs/omnisharp-extended-lsp.nvim"] = {
 }
 
 lang["mrcjkb/rustaceanvim"] = {
+	lazy = true,
+	ft = { "rust" },
 	versions = "^5",
 }
 lang["CrystalAlpha358/vim-mcfunction"] = {
