@@ -1,0 +1,35 @@
+{
+	"Executable boilerplate": {
+		"prefix": "exec",
+		"body": [
+			"cmake_minimum_required(VERSION 3.20)\n",
+			"project($project_name)\n",
+			"set(INCLUDE \"incldue\")",
+			"include_directories($INCLUDE)",
+			"file(GLOB SRC \"*.cpp\")",
+			"add_executable($project_name ${SRC})\n"
+		]
+	},
+	"Library boilerplate": {
+		"prefix": "lib",
+		"body": [
+			"cmake_minimum_required(VERSION 3.20)\n",
+			"project($project_name)\n",
+			"set(INCLUDE \"incldue\")",
+			"include_directories($INCLUDE)",
+			"file(GLOB SRC \"*.cpp\")",
+			"add_library($project_name ${SRC})\n"
+		]
+	},
+	"Fetch Content": {
+		"prefix": "fetchcontent",
+		"body": [
+			"FetchContent_Declare(",
+			"$name",
+			"GIT_REPOSITORY $url",
+			"GIT_TAG $tag",
+			")",
+			"FetchContent_MakeAvailable($name)"
+		]
+	}
+}
