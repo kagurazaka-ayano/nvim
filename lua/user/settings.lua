@@ -11,7 +11,9 @@ settings["dap_deps"] = {
 }
 
 settings["disabled_plugins"] = {
-	"zbirenbaum/neodim",
+	"toppair/peek.nvim",
+	"michalb/sniprun",
+	"dstein64/nvim-scrollview",
 }
 
 return settings

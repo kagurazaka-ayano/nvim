@@ -3,22 +3,14 @@ local env = {}
 env["lervag/vimtex"] = {
 	lazy = false,
 	-- tag = "v2.15", -- uncomment to pin to a specific release
-	init = function() end,
 	config = require("configs.env.vimtex"),
 	ft = "tex",
 }
 
 env["Civitasv/cmake-tools.nvim"] = {
 	lazy = true,
-	init = function() end,
 	config = require("configs.env.cmake-tools"),
 	ft = { "c", "cpp", "cxx", "cc", "cmake" },
-}
-
-env["alepez/vim-gtest"] = {
-	lazy = true,
-	init = function() end,
-	ft = { "c", "cpp" },
 }
 
 env["HiPhish/gradle.nvim"] = {
