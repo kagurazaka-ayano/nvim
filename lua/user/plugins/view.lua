@@ -10,6 +10,7 @@ view["3rd/image.nvim"] = {
 view["Thiago4532/mdmath.nvim"] = {
 	lazy = true,
 	ft = "markdown",
+	cmd = "MdMath",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},

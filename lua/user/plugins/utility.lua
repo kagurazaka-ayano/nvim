@@ -2,6 +2,7 @@ local utility = {}
 
 utility["kawre/leetcode.nvim"] = {
 	lazy = true,
+	cmd = "Leet",
 	build = ":TSUpdate html",
 	dependencies = {
 		"nvim-telescope/telescope.nvim",

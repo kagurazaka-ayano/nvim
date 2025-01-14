@@ -1,7 +1,6 @@
 local tool = {}
 
 tool["CopilotC-Nvim/CopilotChat.nvim"] = {
-	"CopilotC-Nvim/CopilotChat.nvim",
 	branch = "main",
 	dependencies = {
 		{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
@@ -13,7 +12,20 @@ tool["CopilotC-Nvim/CopilotChat.nvim"] = {
 		-- See Configuration section for rest
 	},
 	Lazy = true,
-	event = "BufEnter",
+	cmd = {
+		"CopilotChat",
+		"CopilotChatOpen",
+		"CopilotChatClose",
+		"CopilotChatToggle",
+		"CopilotChatStop",
+		"CopilotChatReset",
+		"CopilotChatSave",
+		"CopilotChatLoad",
+		"CopilotChatDebugInfo",
+		"CopilotChatModels",
+		"CopilotChatAgents",
+		"CopilotChatExplain",
+	},
 }
 
 return tool

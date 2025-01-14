@@ -90,7 +90,7 @@ settings["colorscheme"] = "catppuccin"
 
 -- Set it to true if your terminal has transparent background.
 ---@type boolean
-settings["transparent_background"] = false
+settings["transparent_background"] = true
 
 -- Set background color to use here.
 -- Useful if you would like to use a colorscheme that has a light and dark variant like `edge`.
@@ -101,7 +101,7 @@ settings["background"] = "dark"
 -- Set the command for handling external URLs here. The executable must be available on your $PATH.
 -- This entry is IGNORED on Windows and macOS, which have their default handlers builtin.
 ---@type string
-settings["external_browser"] = "chrome-cli open"
+settings["external_browser"] = "firefox open"
 
 -- Set the language servers that will be installed during bootstrap here.
 -- check the below link for all the supported LSPs:
@@ -110,11 +110,9 @@ settings["external_browser"] = "chrome-cli open"
 settings["lsp_deps"] = {
 	"bashls",
 	"clangd",
-	"html",
 	"jsonls",
 	"lua_ls",
 	"pylsp",
-	"gopls",
 }
 
 -- Set the general-purpose servers that will be installed during bootstrap here.
@@ -124,8 +122,6 @@ settings["lsp_deps"] = {
 ---@type string[]
 settings["null_ls_deps"] = {
 	"clang_format",
-	"gofumpt",
-	"goimports",
 	"prettier",
 	"shfmt",
 	"stylua",
@@ -138,7 +134,6 @@ settings["null_ls_deps"] = {
 ---@type string[]
 settings["dap_deps"] = {
 	"codelldb", -- C-Family
-	"delve", -- Go
 	"python", -- Python (debugpy)
 }
 
@@ -151,8 +146,6 @@ settings["treesitter_deps"] = {
 	"c",
 	"cpp",
 	"css",
-	"go",
-	"gomod",
 	"html",
 	"javascript",
 	"json",
@@ -166,7 +159,6 @@ settings["treesitter_deps"] = {
 	"rust",
 	"typescript",
 	"vimdoc",
-	"vue",
 	"yaml",
 }
 

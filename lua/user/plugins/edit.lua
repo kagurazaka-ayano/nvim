@@ -1,32 +1,32 @@
 local edit = {}
 
 edit["kylechui/nvim-surround"] = {
-	version = "*", -- Use for stability; omit to use `main` branch for the latest features
-	event = "VeryLazy",
-	config = function()
-		require("nvim-surround").setup({
-			-- Configuration here, or leave empty to use defaults
-		})
-	end,
+	lazy = true,
+	event = "BufEnter",
+	config = require("configs.edit.nvim-surround"),
 }
 
 edit["danymat/neogen"] = {
-	event = "BufRead",
-	config = function()
-		require("neogen").setup({
-			enabled = true,
-			input_after_comment = true,
-			snippet_engine = "luasnip",
-			languages = {
-				["cpp.doxygen"] = require("neogen.configurations.cpp"),
-				cs = {
-					template = {
-						annotation_convention = "xmldoc",
-					},
-				},
-			},
-		})
+	lazy = true,
+	cmd = "Neogen",
+	config = require("configs.edit.neogen"),
+}
+
+edit["nosduco/remote-sshfs.nvim"] = {
+	lazy = true,
+	enabled = function()
+		local os = vim.uv.os_uname().sysname
+		return os == "Linux"
 	end,
+	cmd = {
+		"RemoteSSHFSConnect",
+		"RemoteSSHFSDisconnect",
+		"RemoteSSHFSEdit",
+		"RemoteSSHFSFindFiles",
+		"RemoteSSHFSLiveGrep",
+	},
+	dependencies = { "nvim-telescope/telescope.nvim" },
+	init = require("configs.edit.remote-sshfs"),
 }
 
 return edit
