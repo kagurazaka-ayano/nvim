@@ -2,7 +2,8 @@ return function()
 	local os = require("core.global")
 	if os.is_mac then
 		vim.g.vimtex_view_method = "skim"
-	else
+	elseif os.is_linux then
+		vim.g.vimtex_view_general_viewer = "okular"
 		vim.g.vimtex_view_method = "general"
 	end
 	vim.g.vimtex_compiler_latexmk = {
