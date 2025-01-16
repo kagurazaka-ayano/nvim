@@ -1,3 +1,3 @@
 return {
-	neovim_image_text = "Nyavim~",
+	neovim_image_text = "Nyavim~"
 }

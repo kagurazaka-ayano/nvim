@@ -241,7 +241,7 @@
 			"       'noteTextColor': '#0f0f0f',",
 			"       'noteBkgColor': '#f5f6fa',",
 			"       'lineColor': '#eaa1af',",
-  "		  'textColor': '#EAA1AF',",
+			"       'textColor': '#EAA1AF',",
 			"       'labelBoxBkgColor': '#add8e6'",
 			"     }",
 			"   }",
@@ -635,6 +635,17 @@
 		"prefix": "t4",
 		"body": [
 			"| $1 | $2 | $3 | $4 |"
+		]
+	},
+	"Lemma": {
+		"prefix": "lemma",
+		"body": [
+			"{% notel primary fa-circle-plus 'Lemma 2.1'%}",
+			"",
+			"{% folding purple::proof %}",
+			"",
+			"{% endfolding %}",
+			"{% endnotel %}"
 		]
 	}
 }

@@ -4,6 +4,16 @@ tool["tpope/vim-fugitive"] = {
 	lazy = true,
 	cmd = { "Git", "G" },
 }
+
+tool["pysan3/fcitx5.nvim"] = {
+	lazy = true,
+	enabled = function()
+		return vim.fn.executable("fcitx5-remote") == 1
+	end,
+	event = "BufReadPost",
+	cond = vim.fn.executable("fcitx5-remote") == 1,
+	config = require("tool.fcitx5"),
+}
 tool["nvim-tree/nvim-tree.lua"] = {
 	lazy = true,
 	cmd = {
