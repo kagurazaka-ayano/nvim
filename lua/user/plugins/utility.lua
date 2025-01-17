@@ -19,4 +19,19 @@ utility["kawre/leetcode.nvim"] = {
 	},
 }
 
+utility["krady21/compiler-explorer.nvim"] = {
+	lazy = true,
+	cmd = {
+		"CECompile",
+		"CECompileLive",
+		"CEFormat",
+		"CEAddLibrary",
+		"CELoadExample",
+		"CEOpenWebsite",
+		"CEDeleteCache",
+		"CEShowTooltip",
+		"CEGotoLabel",
+	},
+}
+
 return utility
