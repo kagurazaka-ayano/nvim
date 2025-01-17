@@ -15,8 +15,7 @@ edit["danymat/neogen"] = {
 edit["nosduco/remote-sshfs.nvim"] = {
 	lazy = true,
 	enabled = function()
-		local os = vim.uv.os_uname().sysname
-		return os == "Linux"
+		return require("global").is_linux
 	end,
 	cmd = {
 		"RemoteSSHFSConnect",
