@@ -34,4 +34,15 @@ utility["krady21/compiler-explorer.nvim"] = {
 	},
 }
 
+utility["lambdalisue/vim-suda"] = {
+	lazy = true,
+	enabled = function()
+		return vim.fn.executable("sudo")
+	end,
+	cmd = {
+		"SudaRead",
+		"SudaWrite",
+	},
+}
+
 return utility
