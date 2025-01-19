@@ -21,4 +21,12 @@ lang["laurelmay/riscv.vim"] = {
 	lazy = false,
 }
 
+lang["pmizio/typescript-tools.nvim"] = {
+	lazy = true,
+	ft = { "typescript", "tsx" },
+	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	opts = {},
+	config = require("configs.lang.typescript-tools"),
+}
+
 return lang
