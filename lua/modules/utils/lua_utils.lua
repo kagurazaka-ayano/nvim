@@ -1,7 +1,4 @@
 local M = {}
-local is_windows = require("core.global").is_windows
-local is_linux = require("core.global").is_linux
-local lfs = require("lfs")
 
 function M.filter_inplace(t, func)
 	local i = 1
@@ -40,28 +37,6 @@ function M.table_length(T)
 		count = count + 1
 	end
 	return count
-end
-
-function M.file_name(path)
-	return path:match("^.+/(.+)$")
-end
-
-function M.file_name_no_ext(path)
-	return path:match("^.+/(.+)%..+$")
-end
-
-function M.scandir(directory)
-	local i, t, popen = 0, {}, io.popen
-	local pfile = popen('ls -a "' .. directory .. '"')
-	if not pfile then
-		return {}
-	end
-	for filename in pfile:lines() do
-		i = i + 1
-		t[i] = filename
-	end
-	pfile:close()
-	return t
 end
 
 return M

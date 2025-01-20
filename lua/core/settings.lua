@@ -41,7 +41,7 @@ settings["format_disabled_dirs"] = {
 ---@type table<string, boolean>
 settings["formatter_block_list"] = {
 	lua = false, -- example
-	lua_ls = false
+	lua_ls = false,
 }
 
 -- Servers in this list will skip setting formatting capabilities if rhs is true.

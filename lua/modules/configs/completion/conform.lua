@@ -19,6 +19,7 @@ return function()
 			h = { "clang-format" },
 			hpp = { "clang-format" },
 		},
+		formatters = require("user.configs.formatters.formatter_configs"),
 		format_on_save = fmt.format_on_save_callback,
 	})
 end
