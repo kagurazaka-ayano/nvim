@@ -1,4 +1,7 @@
 local M = {}
+local is_windows = require("core.global").is_windows
+local is_linux = require("core.global").is_linux
+local lfs = require("lfs")
 
 function M.filter_inplace(t, func)
 	local i = 1
@@ -29,6 +32,60 @@ function M.extract_property(list, extract_callback)
 		table.insert(li, i, extract_callback(list[i]))
 	end
 	return li
+end
+
+function M.table_length(T)
+	local count = 0
+	for _ in pairs(T) do
+		count = count + 1
+	end
+	return count
+end
+
+function M.file_name(path)
+	return path:match("^.+/(.+)$")
+end
+
+function M.file_name_no_ext(path)
+	return path:match("^.+/(.+)%..+$")
+end
+
+function M.scandir(directory)
+	local i, t, popen = 0, {}, io.popen
+	local pfile = popen('ls -a "' .. directory .. '"')
+	if not pfile then
+		return {}
+	end
+	for filename in pfile:lines() do
+		i = i + 1
+		t[i] = filename
+	end
+	pfile:close()
+	return t
+end
+
+function M.dirtree(dir)
+	assert(dir and dir ~= "", "Please pass directory parameter")
+	if string.sub(dir, -1) == "/" then
+		dir = string.sub(dir, 1, -2)
+	end
+
+	local function yieldtree(dir)
+		for entry in lfs.dir(dir) do
+			if entry ~= "." and entry ~= ".." then
+				entry = dir .. "/" .. entry
+				local attr = lfs.attributes(entry)
+				coroutine.yield(entry, attr)
+				if attr.mode == "directory" then
+					yieldtree(entry)
+				end
+			end
+		end
+	end
+
+	return coroutine.wrap(function()
+		yieldtree(dir)
+	end)
 end
 
 return M
