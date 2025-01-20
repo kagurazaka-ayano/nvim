@@ -35,14 +35,19 @@ completion["joechrisellis/lsp-format-modifications.nvim"] = {
 	lazy = true,
 	event = "LspAttach",
 }
-completion["nvimtools/none-ls.nvim"] = {
+completion["stevearc/conform.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("completion.null-ls"),
+	event = { "BufWritePre" },
+	cmd = { "ConformInfo" },
+	config = require("completion.conform"),
 	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"jay-babu/mason-null-ls.nvim",
+		"williamboman/mason.nvim",
+		"zapling/mason-conform.nvim",
 	},
+}
+completion["zapling/mason-conform.nvim"] = {
+	lazy = true,
+	config = require("completion.mason-conform"),
 }
 completion["hrsh7th/nvim-cmp"] = {
 	lazy = true,

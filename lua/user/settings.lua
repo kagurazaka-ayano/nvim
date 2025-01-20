@@ -16,4 +16,8 @@ settings["disabled_plugins"] = {
 	"dstein64/nvim-scrollview",
 }
 
+settings["ignored_filetypes"] = {}
+
+settings["disabled_formatters"] = {}
+
 return settings

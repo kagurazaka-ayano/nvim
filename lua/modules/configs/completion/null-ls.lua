@@ -1,4 +1,4 @@
-return function()
+local f = function()
 	local null_ls = require("null-ls")
 	local btns = null_ls.builtins
 	local h = null_ls.utils
@@ -22,7 +22,6 @@ return function()
 			extra_args = formatter_args("clang_format"),
 		}),
 		btns.formatting.prettier.with({
-			only_local = "~/.config/nvim/lua/user/configs/external/formatters/",
 			filetypes = {
 				"vue",
 				"typescript",
@@ -77,3 +76,6 @@ return function()
 
 	require("completion.formatting").configure_format_on_save()
 end
+
+return {}
+
