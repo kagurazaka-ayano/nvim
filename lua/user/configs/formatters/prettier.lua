@@ -9,7 +9,9 @@ return {
 			html = "html",
 		},
 	},
-	append_args = {
+	args = {
+		"--stdin-filepath",
+		"$FILENAME",
 		"--config-precedence",
 		"prefer-file",
 		"--config",

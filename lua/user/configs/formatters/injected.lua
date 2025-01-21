@@ -29,8 +29,8 @@ return {
 		-- (defaults to the value from formatters_by_ft)
 		lang_to_formatters = {
 			html = { "prettier", "injected" },
-			javascript = { "prettier" },
-			javascriptreact = { "prettier" },
+			javascript = { "prettier", "injected" },
+			javascriptreact = { "prettier", "injected" },
 		},
 	},
 }

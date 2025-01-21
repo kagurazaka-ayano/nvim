@@ -2,6 +2,7 @@ return function()
 	local fmt = require("completion.formatting")
 	local args = require("user.configs.formatters.package")
 	require("conform").setup({
+		log_level = vim.log.levels.TRACE,
 		options = {
 			lang_to_ft = {
 				bibtex = "bib",
@@ -11,7 +12,7 @@ return function()
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			rust = { "rustfmt", lsp_format = "fallback" },
-			html = { "injected", lsp_format = "never" },
+			html = { "prettier", "injected", lsp_format = "never" },
 			javascript = { "injected", lsp_format = "never" },
 			javascriptreact = { "injected", lsp_format = "never" },
 			tex = { "latexindent" },
