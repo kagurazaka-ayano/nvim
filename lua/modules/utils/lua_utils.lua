@@ -39,4 +39,10 @@ function M.table_length(T)
 	return count
 end
 
+function M.removekey(t, key)
+   local element = t[key]
+   t[key] = nil
+   return element
+end
+
 return M

@@ -33,4 +33,13 @@ env["anurag3301/nvim-platformio.lua"] = {
 	},
 }
 
+env["vhyrro/luarocks.nvim"] = {
+	priority = 1000,
+	config = require("configs.env.luarocks"),
+	opts = {
+		rocks = { "luafilesystem" }, -- specifies a list of rocks to install
+		luarocks_build_args = { "--lua-version=5.1", "--with-lua-include=/usr/local/include" }
+	},
+}
+
 return env

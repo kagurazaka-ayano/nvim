@@ -73,13 +73,6 @@ end
 function M.get_formattable_lsp(bufno)
 	local lsp = M.get_attached_lsp(bufno)
 	local li = {}
-	vim.notify(
-		lua_utils.list_to_str(lsp, function(l)
-			return l.name
-		end),
-		vim.log.levels.WARN,
-		{ title = "LSP Formatter Warning" }
-	)
 	for i = 1, #lsp do
 		if lsp[i].supports_method("textDocument/formatting") then
 			table.insert(li, i, lsp[i].name)
@@ -120,15 +113,6 @@ function M.filter_formatter(bufnr)
 	end
 	local formatters = M.get_available_formatters(bufnr)
 	if #formatters == 0 then
-		local formattable_lsp = M.get_formattable_lsp(bufnr)
-		if #formattable_lsp == 0 then
-			vim.notify(
-				"[LSP] No matching formatter or lsp, will not format.",
-				vim.log.levels.WARN,
-				{ title = "LSP Formatter Warning" }
-			)
-			return
-		end
 		vim.notify(
 			"[LSP] No matching formatter, will try to use lsp to format.",
 			vim.log.levels.WARN,
