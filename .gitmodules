@@ -1,0 +1,3 @@
+[submodule "lua/user/assets/KawaiiLogos"]
+	path = lua/user/assets/KawaiiLogos
+	url = git@github.com:SAWARATSUKI/KawaiiLogos.git
