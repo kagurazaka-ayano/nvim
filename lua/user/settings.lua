@@ -14,6 +14,8 @@ settings["disabled_plugins"] = {
 	"toppair/peek.nvim",
 	"michalb/sniprun",
 	"dstein64/nvim-scrollview",
+	-- disabling this because not working with discord canary
+	"andweeb/presence.nvim",
 }
 
 settings["ignored_filetypes"] = {}
