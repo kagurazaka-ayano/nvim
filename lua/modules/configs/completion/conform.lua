@@ -6,6 +6,7 @@ return function()
 		options = {
 			lang_to_ft = {
 				bibtex = "bib",
+				nixlang = "nix",
 			},
 		},
 		formatters_by_ft = {
@@ -21,6 +22,7 @@ return function()
 			c = { "clang-format" },
 			h = { "clang-format" },
 			hpp = { "clang-format" },
+			nixlang = { "nixpkgs-fmt" },
 		},
 		formatters = args,
 		format_on_save = fmt.format_on_save_callback,
