@@ -239,5 +239,15 @@
 			"",
 			"\\end{minted}"
 		]
+	},
+	"Cases": {
+		"prefix": "alcase",
+		"body": [
+			"\\begin{equation*}",
+			"\\begin{cases}",
+			"$0",
+			"\\end{cases}",
+			"\\end{equation*}"
+		]
 	}
 }

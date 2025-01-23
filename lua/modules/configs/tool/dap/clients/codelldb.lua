@@ -41,6 +41,16 @@ return function()
 			stopOnEntry = false,
 			waitFor = true,
 		},
+		{
+			name = "Debug with stdin from file",
+			type = "codelldb",
+			request = "launch",
+			program = utils.input_exec_path(),
+			cwd = "${workspaceFolder}",
+			stopOnEntry = false,
+			terminal = "integrated",
+			stdio = { utils.input_stdin_path(), nil, nil },
+		},
 	}
 	dap.configurations.cpp = dap.configurations.c
 	dap.configurations.rust = dap.configurations.c

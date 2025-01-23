@@ -21,7 +21,7 @@ function M.get_files(path, predicate)
 			local f = path .. "/" .. file
 			local attr = lfs.attributes(f)
 			if attr.mode == "file" then
-				if predicate(f) then
+				if predicate(file) then
 					table.insert(files, f)
 				end
 			end
