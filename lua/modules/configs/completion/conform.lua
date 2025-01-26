@@ -6,6 +6,7 @@ return function()
 		options = {
 			lang_to_ft = {
 				bibtex = "bib",
+				nix = "nix.conf",
 			},
 		},
 		formatters_by_ft = {
