@@ -1,13 +1,14 @@
 local fun = {}
 
-fun["andweeb/presence.nvim"] = {
-	config = require("configs.fun.presence"),
-}
-
 fun["vyfor/cord.nvim"] = {
+	event = "BufRead",
+	lazy = true,
 	build = "./build || .\\build",
-	event = "VeryLazy",
-	opts = require("configs.fun.cord"), -- calls require('cord').setup()
+	config = require("configs.fun.cord"), -- calls require('cord').setup()
+	branch = "client-server", -- must be this because this is recommended
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
 }
 
 return fun

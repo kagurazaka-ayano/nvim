@@ -1,6 +1,6 @@
 return function()
 	local fmt = require("completion.formatting")
-	local args = require("user.configs.formatters.package")
+	local args = require("user.configs.formatters")
 	require("conform").setup({
 		log_level = vim.log.levels.TRACE,
 		options = {

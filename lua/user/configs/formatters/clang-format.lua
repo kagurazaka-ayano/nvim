@@ -1,1 +1,5 @@
-return { "-style=file" }
+return {
+	append_args = {
+		"-style=file"
+	},
+}

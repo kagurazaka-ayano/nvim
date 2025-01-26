@@ -1,4 +1,4 @@
-local definitions = require("configs.formatters.definitions")
+local parent_dir = require("core.global").vim_path .. "/user/configs/formatters/"
 return {
 	options = {
 		ft_parsers = {
@@ -15,6 +15,6 @@ return {
 		"--config-precedence",
 		"prefer-file",
 		"--config",
-		definitions.get_conf_path("prettier.json"),
+		parent_dir .. "conf/prettier.json",
 	},
 }

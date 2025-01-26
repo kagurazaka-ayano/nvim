@@ -113,7 +113,6 @@ settings["lsp_deps"] = {
 	"clangd",
 	"jsonls",
 	"lua_ls",
-	"pylsp",
 }
 
 -- Set the general-purpose servers that will be installed during bootstrap here.
@@ -131,8 +130,9 @@ settings["conform_deps"] = {
 -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
 ---@type string[]
 settings["dap_deps"] = {
-	"codelldb", -- C-Family
-	"python", -- Python (debugpy)
+	"codelldb",
+	"python",
+	"netcoredbg",
 }
 
 -- Set the Treesitter parsers that will be installed during bootstrap here.
@@ -158,6 +158,7 @@ settings["treesitter_deps"] = {
 	"typescript",
 	"vimdoc",
 	"yaml",
+	"nix",
 }
 
 -- Set the options for neovim's gui clients like `neovide` and `neovim-qt` here.

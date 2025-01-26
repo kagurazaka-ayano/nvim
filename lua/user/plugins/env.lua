@@ -10,7 +10,7 @@ env["lervag/vimtex"] = {
 
 env["Civitasv/cmake-tools.nvim"] = {
 	lazy = true,
-	config = require("configs.env.cmake-tools"),
+	opts = require("configs.env.cmake-tools"),
 	ft = { "c", "cpp", "cxx", "cc", "cmake" },
 }
 
@@ -30,15 +30,6 @@ env["anurag3301/nvim-platformio.lua"] = {
 		"Piomon",
 		"Piodebug",
 		"Piodb",
-	},
-}
-
-env["vhyrro/luarocks.nvim"] = {
-	priority = 1000,
-	config = require("configs.env.luarocks"),
-	opts = {
-		rocks = { "luafilesystem" }, -- specifies a list of rocks to install
-		luarocks_build_args = { "--lua-version=5.1", "--with-lua-include=/usr/local/include" }
 	},
 }
 
