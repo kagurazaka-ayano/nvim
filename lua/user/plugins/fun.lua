@@ -1,14 +1,10 @@
 local fun = {}
 
 fun["vyfor/cord.nvim"] = {
-	event = "BufRead",
-	lazy = true,
-	build = "./build || .\\build",
-	config = require("configs.fun.cord"), -- calls require('cord').setup()
+	build = ":Cord update",
+	config = require("configs.fun.cord"),
 	branch = "client-server", -- must be this because this is recommended
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
+	dependencies = { "https://github.com/lunarmodules/luafilesystem" },
 }
 
 return fun

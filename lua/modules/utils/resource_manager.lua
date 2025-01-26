@@ -1,16 +1,21 @@
 local M = {}
 local global = require("core.global")
 
-
 local spaceless_map = {
 	Tailwindcss = "tailwind css",
 	GoLang = "Golang",
 }
 
 local fetch_files = function(root, name)
-	local fs = path_util.get_files(root, function(p)
-		return string.find(p, name) ~= nil
-	end)
+	local lfs = require("lfs")
+	local fs = {}
+	for i in lfs.dir(root) do
+		local attr = lfs.attributes(root .. i)
+		if attr.mode ~= "directory" and string.find(i, name) ~= nil then
+			table.insert(fs, root .. i)
+		end
+	end
+	vim.notify(vim.inspect(fs))
 	return fs
 end
 
@@ -23,7 +28,7 @@ M.kawaii_logo = function(name)
 end
 
 M.kawaii_status = function(name)
-	local root = M.assets_path .. "KawaiiLogos/" .. "ResponseCode/"
+	local root = M.assets_path .. "KawaiiLogos/ResponseCode/"
 	return fetch_files(root, name)
 end
 
