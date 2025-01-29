@@ -23,6 +23,7 @@ return function()
 			h = { "clang-format" },
 			hpp = { "clang-format" },
 			nix = { "nixfmt", lsp_format = "fallback" },
+			markdown = { "prettier", lsp_format = "never" },
 		},
 		formatters = args,
 		format_on_save = fmt.format_on_save_callback,
