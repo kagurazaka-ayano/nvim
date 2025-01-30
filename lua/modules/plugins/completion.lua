@@ -45,10 +45,7 @@ completion["stevearc/conform.nvim"] = {
 		"zapling/mason-conform.nvim",
 	},
 }
-completion["zapling/mason-conform.nvim"] = {
-	lazy = true,
-	config = require("completion.mason-conform"),
-}
+
 completion["hrsh7th/nvim-cmp"] = {
 	lazy = true,
 	event = "InsertEnter",
